@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Popover</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-icon (click)="abrirPopover()" style="font-size: 30px;" name="ellipsis-horizontal"></ion-icon>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <br>
+  <ion-button (click)="abrirPopover()" color="primary" expand="full">
+     Abrir Popover
+  </ion-button>
+
+</ion-content>

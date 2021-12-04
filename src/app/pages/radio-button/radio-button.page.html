@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Radio Button</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-radio-group (ionChange)="selectPizza($event)" [value]="option_selected" allowEmptySelection="false">
+    <ion-list-header>
+      <ion-label>Elige Pizzas</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Jamón</ion-label>
+      <ion-radio color="danger" slot="start" value="jamon"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Hawaiana</ion-label>
+      <ion-radio color="danger" slot="start" value="hawaiana"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Queso</ion-label>
+      <ion-radio color="danger" slot="start" value="queso"></ion-radio>
+    </ion-item>
+
+  </ion-radio-group>
+
+  
+</ion-content>

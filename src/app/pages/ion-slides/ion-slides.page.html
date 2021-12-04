@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ion Slides</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-content>
+    <ion-slides (ionSlideDidChange)="getEvent($event)" [options]="slideOpts">
+      <ion-slide style="display: block;" *ngFor="let question of questions">
+        <div style="margin-top: 100px;">
+          <ion-text>
+            {{ question.question }}
+          </ion-text>
+        </div>
+        <div style="margin-top:100px;margin-left: 10px;margin-right: 10px;">
+          <ion-button (click)="respondPoll(1)" style="margin-top:20px;" [fill]="button1.fill" [color]="button1.color" expand="block">{{ question.answer1 }}</ion-button>
+          <ion-button (click)="respondPoll(2)" style="margin-top:20px;" [fill]="button2.fill" [color]="button2.color" expand="block">{{ question.answer2 }}</ion-button>
+          <ion-button (click)="respondPoll(3)" style="margin-top:20px;" [fill]="button3.fill" [color]="button3.color" expand="block">{{ question.answer3 }}</ion-button>
+          <ion-button (click)="respondPoll(4)" style="margin-top:20px;" [fill]="button4.fill" [color]="button4.color" expand="block">{{ question.answer4 }}</ion-button>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </ion-content>
+</ion-content>

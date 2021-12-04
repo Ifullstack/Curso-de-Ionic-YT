@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ion Segment</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-segment (ionChange)="segmentChanged($event)" value="1" color="secondary">
+    <ion-segment-button value="1">
+      <ion-label>Option 1</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="2">
+      <ion-label>Option 2</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="3">
+      <ion-label>Option 3</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div *ngIf="optionSelected == 1">
+      <h3>La opción elegida es la 1</h3>
+  </div>
+
+  <div *ngIf="optionSelected == 2">
+    <h3>La opción elegida es la 2</h3>
+  </div>
+
+  <div *ngIf="optionSelected == 3">
+    <h3>La opción elegida es la 3</h3>
+  </div>
+
+  <!--
+    Styles properties:
+    - color
+    - disabled
+    - scrollable
+    - swipe-gesture
+  -->
+</ion-content>

@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ion Virtual Scroll</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--
+  <ion-progress-bar *ngIf="!todo_cargado" color="danger" type="indeterminate"></ion-progress-bar>
+  -->
+ 
+  <div *ngIf="!todo_cargado">
+    <ion-item *ngFor="let item of skeletonData" detail>
+      <ion-thumbnail slot="start">
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-thumbnail>
+
+      <ion-label>
+        <ion-skeleton-text animated></ion-skeleton-text>
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-label>
+    </ion-item> 
+  </div>
+
+  <br>
+
+  <ion-virtual-scroll *ngIf="todo_cargado" [items]="mensajesMostrar" approxItemHeight="320px">
+    <ion-item *virtualItem="let mensaje;" detail>
+      <ion-thumbnail slot="start">
+        <ion-img [src]="mensaje.avatar"></ion-img>
+      </ion-thumbnail>
+
+      <ion-label>
+        <h2>{{ mensaje.nombre }}</h2>
+        <p>{{ mensaje.mensaje }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-virtual-scroll>
+
+  
+
+
+</ion-content>

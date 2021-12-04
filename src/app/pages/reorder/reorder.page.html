@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Reorder</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <ion-text color="primary" (click)="order()">
+    Ordenar
+  </ion-text>
+  <br>
+  <ion-reorder-group (ionItemReorder)="doReorder($event)" [disabled]="orderBool">
+    <!-- Default reorder icon, end aligned items -->
+    <ion-item *ngFor="let item of items;let i = index;">
+      <ion-label>
+        Item {{ item }}
+      </ion-label>
+      <ion-reorder slot="end"></ion-reorder>
+    </ion-item>
+  </ion-reorder-group>
+</ion-content>

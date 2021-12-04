@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ion Searchbar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar (ionChange)="getSearchBarChanges($event)" [value]="value" color="light"></ion-searchbar>
+
+  <!--
+    Styles properties:
+    - color
+    - placeholder
+    - showCancelButton
+    - animated
+    - cancelButtonText
+    - clearIcon
+    - inputmode
+    - type
+    - searchIcon
+  -->
+</ion-content>

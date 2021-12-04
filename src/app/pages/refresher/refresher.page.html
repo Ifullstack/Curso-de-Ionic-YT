@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Refresher</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionStart)="doStart($event)" (ionPull)="doPull($event)" (ionRefresh)="doRefresher($event)">
+    <ion-refresher-content refreshingSpinner="dots"></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-item *ngFor="let alarma of alarmas">
+      <ion-label>{{ alarma  }}</ion-label>
+      <ion-icon slot="end" name="alarm"></ion-icon>
+  </ion-item>
+
+
+
+</ion-content>

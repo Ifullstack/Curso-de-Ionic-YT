@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Inputs</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <!-- Input with value -->
+  <ion-input  color="primary" placeholder="Escribe tu nombre"></ion-input>
+  <br>
+  <ion-textarea (ionChange)="obtenerValorInput($event)" color="primary" placeholder="Escribe tu biografia"></ion-textarea>
+
+  <ion-button (click)="obtenerValorInput()" expand="block" color="danger">
+      Aceptar
+  </ion-button>
+
+</ion-content>

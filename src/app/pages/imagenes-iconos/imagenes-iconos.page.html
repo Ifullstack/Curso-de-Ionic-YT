@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Imágenes e Íconos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-icon style="font-size: 24px;" color="secondary" mode="ios" name="alarm-sharp"></ion-icon>
+  
+ 
+  <ion-icon style="font-size: 44px;" src="../../../assets/javascript-logo.svg"></ion-icon>
+
+  <br>
+  <br>
+  
+  <ion-avatar>
+    <ion-img [src]="img || '../../../assets/loading.gif'"></ion-img>
+  </ion-avatar>
+  <br>
+  <br>
+  <ion-thumbnail>
+    <ion-img [src]="img || '../../../assets/loading.gif'"></ion-img>
+  </ion-thumbnail>
+
+  <ion-img [src]="img || '../../../assets/loading.gif'"></ion-img>
+
+</ion-content>
